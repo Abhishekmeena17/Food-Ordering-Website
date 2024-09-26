@@ -3,6 +3,8 @@ import fs from 'node:fs/promises';
 import bodyParser from 'body-parser';
 import express from 'express';
 
+require("dotenv").config();
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -66,4 +68,4 @@ app.use((req, res) => {
   res.status(404).json({ message: 'Not found' });
 });
 
-app.listen(3000);
+app.listen(process.env.PORT);
