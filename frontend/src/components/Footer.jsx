@@ -17,7 +17,7 @@ export default function Footer() {
     }, 0);
 
   return (
-    <div className="main-footer-container hidden ">
+    <div className="main-footer-container hidden max-[650px]:contents">
       <div className="flex justify-evenly bg-black w-screen fixed bottom-0">
         <div className="text-xs mx-3 mt-4 cursor-pointer h-auto text-yellow-600">
         <button onClick={userProgressCtx.handleLogin}>LOGIN</button>
