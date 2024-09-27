@@ -1,4 +1,4 @@
-// require("dotenv").config()
+require("dotenv").config()
 import fs from 'node:fs/promises';
 
 import bodyParser from 'body-parser';
@@ -67,4 +67,4 @@ app.use((req, res) => {
   res.status(404).json({ message: 'Not found' });
 });
 
-app.listen(3000, console.log("hello"));
+app.listen(process.env.PORT);
